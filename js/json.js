@@ -1,35 +1,47 @@
-var kidsWithValuables {
+var kidsWithValuables = {
 	"kids": 
-	[ 
+	{ 
+		"locker1":
 		{
-		"locker": ,
-		"name": "Marcus", 
-		"valuablesInLocker":
-		}
-		{
-		"locker": ,
-		"name": "Rick", 
-		"valuablesInLocker": 
+			"number": "216",
+			"name": "Marcus", 
+			"valuablesInLocker": "phone",
+			"timeToWatch": 30
 		},
+		"locker2":
 		{
-		"locker": ,
-		"name": "Chris", 
-		"valuablesInLocker": 
-		}
+			"number": "321",
+			"name": "Rick", 
+			"valuablesInLocker": "tablet",
+			"timeToWatch": 30
+		},
+		"locker3":
 		{
-		"locker": ,
-		"name": "Michael",
-		"valuablesInLocker": 
-		}
+			"number": "136",
+			"name": "Chris", 
+			"valuablesInLocker": "phone",
+			"timeToWatch": 30
+		},
+		"locker4":
 		{
-		"locker": ,
-		"name": "Brandon",
-		"valuablesInLocker": 
-		}
+			"number": "112",
+			"name": "Michael",
+			"valuablesInLocker": "phone",
+			"timeToWatch": 60
+		},
+		"locker5":
 		{
-		"locker": ,
-		"name": "Luke",
-		"valuablesInLocker": 		
+			"number": "245",
+			"name": "Brandon",
+			"valuablesInLocker": "phone",
+			"timeToWatch": 30
+		},
+		"locker6":
+		{
+			"number": "301",
+			"name": "Luke",
+			"valuablesInLocker": "tablet",
+			"timeToWatch": 60		
 		}
-	]
+	}
 };
