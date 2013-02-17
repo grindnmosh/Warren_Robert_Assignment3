@@ -1,0 +1,3 @@
+//alert("JavaScript works!");
+
+// code
