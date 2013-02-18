@@ -22,38 +22,7 @@ var me = "Robert",
 	stayHidden = false,
 	kidsWatched = ["Marcus", "Rick", "Chris", "Michael", "Brandon", "Luke"],
 	lockerHit = "Eric";
-		
 
-var lockers = function (name) {
-	var student = (name);
-	var lockerHold = [];
-	var lockerNumber = function (number){}; // procedure method
-	var lockerLoad = function (item) { 
-		if (item !== kids.name) {
-			lockerHold.push(item);
-			console.log(name + " has placed a " + item + " in the locker.")
-		} else {
-			console.log("Not allowed to load students.")
-		}	
-	};
-	var lockerUnload = function (item) {
-		lockerHold.pop(item);
-		console.log(item + " has been removed from the locker.")
-	};
-	var lockerList = function () {
-		for (var n = 0; n < lockerHold.length; n++) {
-		console.log("Locker " + n + ": " + lockerHold[n] + ".");
-	};
-};
-	var getNumber = function () { return number; }; // function method
-	var getName = function () { return name; };
-		return {
-		"student": getName, //accessor method 
-		"lockerLoad": lockerLoad,
-		"lockerUnload": lockerUnload,
-		"lockerList": lockerList // accessor method
-		};
-}; //object function
 
 var attemptToStayHidden = function(whoIsHiding, whoIsLookingOut) {
 	if (whoIsHiding === "Robert") 
@@ -198,8 +167,7 @@ console.log(acting); // bolean function
 
 truePlacement = useOfCameras(1);
 console.log(truePlacement); 
-console.log("That makes " + plan + " cameras total in use.");
-console.log("The specific lockers those cameras will record are as follows."); // number function
+console.log("That makes " + plan + " cameras total in use."); // number function
 
 watch = watching([timePerLocker], 60);
 console.log(watch); 
