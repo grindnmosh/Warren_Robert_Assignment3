@@ -29,9 +29,13 @@ var lockers = function (name) {
 	var lockerHold = [];
 	var lockerNumber = function (number){};
 	var lockerLoad = function (item) {
-		lockerHold.push(item);
-		console.log(name + " has placed a " + item + " in the locker.")
-	};
+		if (item !== kids.name) {
+				lockerHold.push(item);
+				console.log(name + " has placed a " + item + " in the locker.")
+			} else {
+				console.log("Not allowed to load students.")
+			}	
+		};
 	var lockerUnload = function (item) {
 		lockerHold.pop(item);
 		console.log(item + " has been removed from the locker.")
@@ -117,16 +121,20 @@ var	cameraNumbers = [1, 2, 3, 4],
 };// number function
 
 var	watching = function([timePerLocker], totalTimeUsedPerCamera) {
+	needToWatch = kidsWatched,
 	lockernumbers = [216, 321, 136, 112, 245, 301];
 	console.log("We will need to rotate where the camera's are recording.");
 	console.log("We will divide the camera time with 2 of the camera's watching  " + kidsRepeated + "'s lockers since they have been broken into multiple times already.");
 	console.log("and dive the other 2 cameras between the other 4 lockers for 30 minutes apiece.");
 		for (var key in kidsWithValuables.kids) {
 		var kids = kidsWithValuables.kids[key];
-	console.log(kids.name + " who is assigned locker number " + kids.number + " and has " + kids.valuablesInLocker + " stored in their locker. We will watch the locker for " + kids.timeToWatch + " minutes."); // JSON 
+		console.log(kids.name + " who is assigned locker number " + kids.number + " and has " + kids.valuablesInLocker + " stored in their locker.");
+		};
+			for (var i=0; i < lockernumbers.length; i++) {
+			console.log("We will watch " + lockernumbers[i] + " belonging to " + needToWatch[i] + " for " + [timePerLocker[i]] + " minutes from behind the bleachers so that we are within range.");
 	};
 	console.log('The locker that has been hit the most times is locker number  ' + lockernumbers.pop() + ' and belongs to ' + kidsRepeated.pop() + ' who stuck his ' + kids.valuablesInLocker + ' in his locker today.');
-	console.log("I have a feeling he will be hit again today.")
+	console.log("I have a feeling he will be hit again today.");
 	lockersToWatch = [216, 321, 136, 112, 245, 301];
 	return lockersToWatch;
 }; // array function 
@@ -135,13 +143,13 @@ var	discovery = function(kidsMonitored, robbed) {
 	console.log("We know that " + kidsWatched + " brought there phones and tablets to school today.");
 	console.log("We know that none of their lockers were hit while being watched by camera.");
 	console.log("We also know that everyones stuff was there when they went back to their locker.");
-var	suprise = lockerHit + " came running out with tears running down his face and tells the coach that all of his stuff was gone"
+var	suprise = lockerHit + " came running out with tears running down his face and tells the coach that all of his stuff was gone.";
 	return suprise; 
 }; // string function
 
 attemptToStayHidden(me, myFriend); // procedure
 
-console.log("So we have determined whose locker will be watched and for how long.")
+console.log("So we have determined whose locker will be watched and for how long.");
 
 for (var key in kidsWithValuables.kids) {
 	var kids = kidsWithValuables.kids[key];
@@ -151,7 +159,7 @@ console.log(kids.name + " is assigned locker number " + kids.number + " and has 
 acting = actingOnPlanTwo(true, true);
 console.log(acting); // bolean function
 
-truePlacement = useOfCameras(1),
+truePlacement = useOfCameras(1);
 console.log(truePlacement); 
 console.log("That makes " + plan + " cameras total in use.");
 console.log("The specific lockers those cameras will record are as follows."); // number function
@@ -198,14 +206,12 @@ luke.lockerLoad("keys");
 luke.lockerLoad("clothes");
 console.log("so everything in the locker is : ");
 luke.lockerList();
-
-
 console.log(marcus);
-console.log(rick)
-console.log(chris)
-console.log(michael)
-console.log(brandon)
-console.log(luke)
+console.log(rick);
+console.log(chris);
+console.log(michael);
+console.log(brandon);
+console.log(luke);
 
 console.log("Unbeknownst to us, Eric had all his toys with him today.");
 var eric = lockers("Eric");
@@ -219,19 +225,16 @@ console.log("so everything in the locker is : ");
 eric.lockerList();
 console.log("His locker was not being watched by us.");
 console.log("The thieves did see him load his locker with all his toys."); 
-
-console.log("The thieves entered the locker room and went straight to Eric's locker and opened it up.")
-
+console.log("The thieves entered the locker room and went straight to " + eric.student() + "'s locker and opened it up.");
 eric.lockerUnload("iPhone 5");
 eric.lockerUnload("iPad Retina");
 eric.lockerUnload("PS Vita");
 eric.lockerUnload("wallet");
-
-console.log("This left only the following in the locker:");
+console.log("This left only the following in " + eric.student() + "'s locker:");
 eric.lockerList();
 
 shocker = discovery(kidsWatched, lockerHit);
 console.log(shocker); // string function
 
-console.log("We will need a wider coverage for our next attempt to catch the thieves.")
+console.log("We will need a wider coverage for our next attempt to catch the thieves.");
 
