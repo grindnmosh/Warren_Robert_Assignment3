@@ -76,7 +76,7 @@ var attemptToStayHidden = function(whoIsHiding, whoIsLookingOut) {
 
 var actingOnPlanTwo = function(laptopInCameraRange, roomOnHardrive) {
 var hardriveTrueSize = 320000,
-var harddriveHasSpaceUsed = True
+	harddriveHasSpaceUsed = true;
 	console.log(myFriend + " asks if it is true that we are in range of the spycams and " + me + " tells him that it is " + laptopInCameraRange + ".");
 	if (laptopInCameraRange === true)// I used 3 different Bolean logical operators to test fir true and false. 
 	{
