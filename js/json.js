@@ -45,3 +45,34 @@ var kidsWithValuables = {
 		}
 	}
 };
+
+var valuables = {
+"devices": 
+	[
+		{
+			"brand": "HTC",
+			"model": "One S"		
+		},
+		{
+			"brand": "Apple",
+			"model": "iPad 2"			
+		},
+		{
+			"brand": "LG",
+			"model": "Marque"
+		},
+		{
+			"brand": "Samsung",
+			"model": "Galaxy S2"
+		},
+		{
+			"brand": "Samsung",
+			"model": "Galaxy Note 2"
+		},
+		{
+			"brand": "Samsung",
+			"model": "Galaxy Tab 10.1"		
+		}
+	]
+};
+

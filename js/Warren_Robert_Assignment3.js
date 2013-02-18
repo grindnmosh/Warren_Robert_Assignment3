@@ -122,17 +122,21 @@ var	cameraNumbers = [1, 2, 3, 4],
 
 var	watching = function([timePerLocker], totalTimeUsedPerCamera) {
 	needToWatch = kidsWatched,
-	lockernumbers = [216, 321, 136, 112, 245, 301];
+	lockernumbers = [216, 321, 136, 112, 245, 301],
+	actions = ["camera has been placed", "camera has been adjusted"]
 	console.log("We will need to rotate where the camera's are recording.");
 	console.log("We will divide the camera time with 2 of the camera's watching  " + kidsRepeated + "'s lockers since they have been broken into multiple times already.");
 	console.log("and dive the other 2 cameras between the other 4 lockers for 30 minutes apiece.");
 		for (var key in kidsWithValuables.kids) {
 		var kids = kidsWithValuables.kids[key];
 		console.log(kids.name + " who is assigned locker number " + kids.number + " and has " + kids.valuablesInLocker + " stored in their locker.");
+			for (var i=0; i < actions.length; i++) {
+			console.log("The " + actions[i] + " in its proper position.");
+			};
+		};	
+		for (var i=0; i < lockernumbers.length; i++) {
+		console.log("We will watch " + lockernumbers[i] + " belonging to " + needToWatch[i] + " for " + [timePerLocker[i]] + " minutes from behind the bleachers so that we are within range.");
 		};
-			for (var i=0; i < lockernumbers.length; i++) {
-			console.log("We will watch " + lockernumbers[i] + " belonging to " + needToWatch[i] + " for " + [timePerLocker[i]] + " minutes from behind the bleachers so that we are within range.");
-	};
 	console.log('The locker that has been hit the most times is locker number  ' + lockernumbers.pop() + ' and belongs to ' + kidsRepeated.pop() + ' who stuck his ' + kids.valuablesInLocker + ' in his locker today.');
 	console.log("I have a feeling he will be hit again today.");
 	lockersToWatch = [216, 321, 136, 112, 245, 301];
