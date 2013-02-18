@@ -27,15 +27,15 @@ var me = "Robert",
 var lockers = function (name) {
 	var student = (name)
 	var lockerHold = [];
-	var lockerNumber = function (number){};
-	var lockerLoad = function (item) {
+	var lockerNumber = function (number){}; // procedure method
+	var lockerLoad = function (item) { 
 		if (item !== kids.name) {
-				lockerHold.push(item);
-				console.log(name + " has placed a " + item + " in the locker.")
-			} else {
-				console.log("Not allowed to load students.")
-			}	
-		};
+			lockerHold.push(item);
+			console.log(name + " has placed a " + item + " in the locker.")
+		} else {
+			console.log("Not allowed to load students.")
+		}	
+	};
 	var lockerUnload = function (item) {
 		lockerHold.pop(item);
 		console.log(item + " has been removed from the locker.")
@@ -45,16 +45,15 @@ var lockers = function (name) {
 		console.log("Locker " + n + ": " + lockerHold[n] + ".");
 	};
 };
-	var getNumber = function () { return number; };
+	var getNumber = function () { return number; }; // function method
 	var getName = function () { return name; };
 		return {
-		"student": getName,
-		"lockerNumber": getNumber, 
+		"student": getName, //accessor method 
 		"lockerLoad": lockerLoad,
 		"lockerUnload": lockerUnload,
-		"lockerList": lockerList
+		"lockerList": lockerList // accessor method
 		};
-};
+}; //object function
 
 var attemptToStayHidden = function(whoIsHiding, whoIsLookingOut) {
 	if (whoIsHiding === "Robert") 
@@ -65,11 +64,11 @@ var attemptToStayHidden = function(whoIsHiding, whoIsLookingOut) {
 		} else if (stayHidden === false) {
 			console.log(whoIsHiding + " will ask to go to the bathroom about 30 minutes into class and move the cameras");
 		};
-	} else if (whoIsHiding === "Sam") {
+	} else if (whoIsHiding === "sam") {
 		console.log("So it's decided " + whoIsHiding + " will go in and plant the cameras while " + whoIsLookingOut + " sets up the laptop behind the bleachers to start to monitor the cameras.");
-		if (stayHidden = true) {
+		if (stayHidden === true) {
 			console.log(whoIsHiding + " will stay hidden and change the 2 cameras when the time is right.");
-		} else if (stayHidden = false) {
+		} else if (stayHidden === false) {
 			console.log(whoIsHiding + " will ask to go to the bathroom about 30 minutes into class and move the cameras");
 		};
 	};
@@ -77,19 +76,20 @@ var attemptToStayHidden = function(whoIsHiding, whoIsLookingOut) {
 
 var actingOnPlanTwo = function(laptopInCameraRange, roomOnHardrive) {
 	console.log(myFriend + " asks if it is true that we are in range of the spycams and " + me + " tells him that it is " + laptopInCameraRange + ".");
-	if (laptopInCameraRange === true) {
+	if (laptopInCameraRange === true)// I used 3 different Bolean logical operators to test fir true and false. 
+	{
 		console.log(me + " tells " + myFriend + " ok I am picking up the camera signals");
-		if (roomOnHardrive === true) {
-			console.log("We have plenty of harddrive space to record the cameras on.")
-		} else if (roomOnHardrive === false) {
-			console.log("I am going to have to delete some stuff to make room on the hardrive.")
+		if (roomOnHardrive >= 500) {
+			console.log("We have plenty of harddrive space to record the cameras on.");
+		} else if (roomOnHardrive < 500) {
+			console.log("I am going to have to delete some stuff to make room on the hardrive.");
 		};
 	} else if (laptopInCameraRange === false) {
 		console.log(me + " tells " + myFriend + " that it's back to the drawing board.");
-		if (roomOnHardrive === true) 
+		if (roomOnHardrive >= 500) 
 		{
 			console.log("We have plenty of harddrive space to record the cameras on if we can get close enough.");
-		} else if (roomOnHardrive === false) 
+		} else if (roomOnHardrive < 500) 
 		{
 			console.log("I am going to have to delete some stuff to make room on the hardrive as well.");
 		};
@@ -156,7 +156,7 @@ for (var key in kidsWithValuables.kids) {
 console.log(kids.name + " is assigned locker number " + kids.number + " and has " + kids.valuablesInLocker + " stored in their locker. We will watch the locker for " + kids.timeToWatch + " minutes.");
 }; // JSON 
 
-acting = actingOnPlanTwo(true, true);
+acting = actingOnPlanTwo(true, 12320);
 console.log(acting); // bolean function
 
 truePlacement = useOfCameras(1);
@@ -176,7 +176,7 @@ var	chris = lockers("Chris");
 var	michael = lockers("Michael");
 var	brandon = lockers("Brandon");
 var	luke = lockers("Luke");
-marcus.lockerLoad("HTC One S");
+marcus.lockerLoad("HTC One S"); // mutator method
 marcus.lockerLoad("keys");
 marcus.lockerLoad("clothes");
 console.log("so everything in the locker is : ");
@@ -215,7 +215,7 @@ console.log(luke);
 
 console.log("Unbeknownst to us, Eric had all his toys with him today.");
 var eric = lockers("Eric");
-eric.lockerLoad("keys");
+eric.lockerLoad("keys"); 
 eric.lockerLoad("clothes");
 eric.lockerLoad("iPhone 5");
 eric.lockerLoad("iPad Retina");
@@ -227,7 +227,7 @@ console.log("His locker was not being watched by us.");
 console.log("The thieves did see him load his locker with all his toys."); 
 console.log("The thieves entered the locker room and went straight to " + eric.student() + "'s locker and opened it up.");
 eric.lockerUnload("iPhone 5");
-eric.lockerUnload("iPad Retina");
+eric.lockerUnload("iPad Retina"); // mutator method
 eric.lockerUnload("PS Vita");
 eric.lockerUnload("wallet");
 console.log("This left only the following in " + eric.student() + "'s locker:");
@@ -238,3 +238,8 @@ console.log(shocker); // string function
 
 console.log("We will need a wider coverage for our next attempt to catch the thieves.");
 
+console.log(" ");
+console.log(" ");
+console.log(" ");
+console.log("example that the rules work to not allow students to be put in the locker.");
+eric.lockerLoad("Luke");
