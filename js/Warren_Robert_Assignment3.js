@@ -19,7 +19,9 @@ var me = "Robert",
 	kidsHit = ["Michael", "Brandon", "Luke"],
 	kidsRepeated =["Michael", "Luke"],
 	timePerLocker = [30, 30, 30, 60, 30, 60],
-	stayHidden = false;
+	stayHidden = false,
+	kidsWatched = ["Marcus", "Rick", "Chris", "Michael", "Brandon", "Luke"],
+	lockerHit = "Eric";
 		
 
 var lockers = function (name) {
@@ -129,6 +131,14 @@ var	watching = function([timePerLocker], totalTimeUsedPerCamera) {
 	return lockersToWatch;
 }; // array function 
 
+var	discovery = function(kidsMonitored, robbed) {
+	console.log("We know that " + kidsWatched + " brought there phones and tablets to school today.");
+	console.log("We know that none of their lockers were hit while being watched by camera.");
+	console.log("We also know that everyones stuff was there when they went back to their locker.");
+var	suprise = lockerHit + " came running out with tears running down his face and tells the coach that all of his stuff was gone"
+	return suprise; 
+}; // string function
+
 attemptToStayHidden(me, myFriend); // procedure
 
 console.log("So we have determined whose locker will be watched and for how long.")
@@ -198,13 +208,13 @@ console.log(brandon)
 console.log(luke)
 
 console.log("Unbeknownst to us, Eric had all his toys with him today.");
-var eric = lockers("Eric")
-eric.lockerLoad("iphone 5");
-eric.lockerLoad("iPhad Retina");
-eric.lockerLoad("PS Vita");
-eric.lockerLoad("wallet");
+var eric = lockers("Eric");
 eric.lockerLoad("keys");
 eric.lockerLoad("clothes");
+eric.lockerLoad("iPhone 5");
+eric.lockerLoad("iPad Retina");
+eric.lockerLoad("PS Vita");
+eric.lockerLoad("wallet");
 console.log("so everything in the locker is : ");
 eric.lockerList();
 console.log("His locker was not being watched by us.");
@@ -212,11 +222,16 @@ console.log("The thieves did see him load his locker with all his toys.");
 
 console.log("The thieves entered the locker room and went straight to Eric's locker and opened it up.")
 
-eric.lockerUnload("iphone 5");
-eric.lockerUnload("iPhad Retina");
+eric.lockerUnload("iPhone 5");
+eric.lockerUnload("iPad Retina");
 eric.lockerUnload("PS Vita");
-eric.lockerUnload("wallet")
+eric.lockerUnload("wallet");
 
+console.log("This left only the following in the locker:");
+eric.lockerList();
 
+shocker = discovery(kidsWatched, lockerHit);
+console.log(shocker); // string function
 
+console.log("We will need a wider coverage for our next attempt to catch the thieves.")
 
