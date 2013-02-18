@@ -25,7 +25,7 @@ var me = "Robert",
 		
 
 var lockers = function (name) {
-	var student = (name)
+	var student = (name);
 	var lockerHold = [];
 	var lockerNumber = function (number){}; // procedure method
 	var lockerLoad = function (item) { 
@@ -75,6 +75,8 @@ var attemptToStayHidden = function(whoIsHiding, whoIsLookingOut) {
 }; // procedure
 
 var actingOnPlanTwo = function(laptopInCameraRange, roomOnHardrive) {
+var hardriveTrueSize = 320000,
+var harddriveHasSpaceUsed = True
 	console.log(myFriend + " asks if it is true that we are in range of the spycams and " + me + " tells him that it is " + laptopInCameraRange + ".");
 	if (laptopInCameraRange === true)// I used 3 different Bolean logical operators to test fir true and false. 
 	{
@@ -160,7 +162,7 @@ for (var key in kidsWithValuables.kids) {
 console.log(kids.name + " is assigned locker number " + kids.number + " and has " + kids.valuablesInLocker + " stored in their locker. We will watch the locker for " + kids.timeToWatch + " minutes.");
 }; // JSON 
 
-acting = actingOnPlanTwo(true, 12320);
+acting = actingOnPlanTwo(true, 120320);
 console.log(acting); // bolean function
 
 truePlacement = useOfCameras(1);
