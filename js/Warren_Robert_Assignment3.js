@@ -98,9 +98,12 @@ var	watching = function([timePerLocker], totalTimeUsedPerCamera) {
 	console.log("We will need to rotate where the camera's are recording.");
 	console.log("We will divide the camera time with 2 of the camera's watching  " + kidsRepeated + "'s lockers since they have been broken into multiple times already.");
 	console.log("and dive the other 2 cameras between the other 4 lockers for 30 minutes apiece.");
+		console.log(kidsWithValuables.kids)
 		for (var key in kidsWithValuables.kids) {
 		var kids = kidsWithValuables.kids[key];
 		console.log(kids.name + " who is assigned locker number " + kids.number + " and has " + kids.valuablesInLocker + " stored in their locker.");
+		console.log("It is " + kids.wellLiked + " that " + kids.name + " is well liked");
+		console.log(kids.name + " hangs around with " + kids.friends + " everyday.");
 			for (var i=0; i < actions.length; i++) {
 			console.log("The " + actions[i] + " in its proper position.");
 			};
@@ -175,6 +178,9 @@ console.log('We are using 60 minutes per camera to watch locker numbers ' + lock
 console.log('Though ' + kidsRepeated.pop() + ' is the kid that gets picked on the most.');
 console.log('I saw ' + kidsHit.push("Marcus") + ' kids with their cellphones today and 2 with tablets.'); //array function
 
+
+console.log("So what we have coverd isinside this notebook.")
+console.log(kidsWithValuables.kids)
 var marcus = lockers("Marcus");
 var	rick = lockers("Rick");
 var	chris = lockers("Chris");
@@ -248,3 +254,4 @@ console.log(" ");
 console.log(" ");
 console.log("example that the rules work to not allow students to be put in the locker.");
 eric.lockerLoad("Luke");
+
