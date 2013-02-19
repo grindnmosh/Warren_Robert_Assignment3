@@ -179,7 +179,7 @@ console.log('Though ' + kidsRepeated.pop() + ' is the kid that gets picked on th
 console.log('I saw ' + kidsHit.push("Marcus") + ' kids with their cellphones today and 2 with tablets.'); //array function
 
 
-console.log("So what we have coverd isinside this notebook.")
+console.log("So what we have coverd is inside this notebook.")
 console.log(kidsWithValuables.kids)
 var marcus = lockers("Marcus");
 var	rick = lockers("Rick");
