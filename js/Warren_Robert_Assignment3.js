@@ -196,7 +196,7 @@ rick.lockerLoad("iPad 2");
 rick.lockerLoad("keys");
 rick.lockerLoad("clothes");
 console.log("so everything in the locker is : ");
-rick.lockerList();
+rick.lockerList(); //accessor methos
 chris.lockerLoad("LG Marquee");
 chris.lockerLoad("keys");
 chris.lockerLoad("clothes");
